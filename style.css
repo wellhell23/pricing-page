@@ -71,6 +71,7 @@ button {
 p {
 	line-height: 30px;
 	font-size: 25px;
+	color: gray;
 }
 button {
 	line-height: 50px;
@@ -84,6 +85,7 @@ button {
 	font-size: 50px;
 	display: flex;
 	justify-content: center;
+	color: black;
 }
 #toggle {
 	display: none;
@@ -116,4 +118,67 @@ button {
 
 #toggle:checked + #toggleLable:before {
 	left: 55px;
+}
+
+.footer {
+	margin-top: 50px;
+	width: 100%;
+	height: auto;
+	min-height: 10vh;
+	display: flex;
+	font-size: 20px;
+	justify-content: space-around;
+	background: linear-Gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.footer-col-1 {
+	width: 33%;
+	display: flex;
+	min-width: 300px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-col-2 {
+	width: 33%;
+	min-width: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+}
+.footer-col-3 {
+	width: 33%;
+	min-width: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+	.footer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-col-1 {
+		padding: 10px;
+		text-align: center;
+	}
+	.footer-col-2 {
+		padding: 20px;
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer-col-3 {
+		min-height: 50px;
+		align-items: space-around;
+	}
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+li {
+	list-style: none;
 }
