@@ -1,4 +1,5 @@
 body {
+	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
 	font-weight: 700;
 	width: 100vw;
@@ -7,29 +8,23 @@ body {
 	background-position: right top, left bottom;
 	background-repeat: no-repeat;
 }
-
+span {
+	font-size: 30px;
+	margin-right: 8px;
+}
 .pricingContainer {
-	/* border-style: solid;
-	border-color: black; */
 	display: flex;
 	flex-direction: column;
-
-	/* 
-	align-content: space-around;
-	align-items: center;
-	 */
-	/* 
-	*/
+	flex-wrap: wrap;
 	text-align: center;
-	/* background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
-	background-position: right top, left bottom;
-	background-repeat: no-repeat; */
 }
 
 .plansContainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	row-gap: 40px;
+
 	/* border-style: solid;
 	border-color: black; */
 }
@@ -38,10 +33,12 @@ body {
 	border-color: black; */
 	/* border: 2px; */
 	background: hsl(240, 78%, 98%);
-	width: 400px;
+	width: 300px;
 	height: auto;
 	padding: 20px;
 	border-radius: 25px;
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+	gap: 10px;
 }
 button {
 	width: 80%;
@@ -51,27 +48,69 @@ button {
 .plansDetails:hover {
 	background: linear-Gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 	transform: scale(1.1);
+	color: white;
 }
 .plansDetails:hover button {
 	background: white;
+	color: hsl(232, 13%, 33%);
+	font-size: 15px;
 }
 .heading {
-	padding: 10px;
+	color: linear-Gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
 .plans {
-	padding: 10px;
-	padding-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	padding-bottom: 30px;
+	color: gray;
 }
 p {
-	line-height: 60px;
+	line-height: 30px;
 	font-size: 25px;
 }
 button {
-	line-height: 60px;
+	line-height: 50px;
+	color: white;
+	font-size: 15px;
 	/* font-size: 25px; */
 	background: linear-Gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 .price {
-	/* font-size: 50px; */
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+}
+#toggle {
+	display: none;
+}
+#toggleLable {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 50px;
+	margin: 10px;
+	background: linear-Gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	border-radius: 20px;
+	/* 
+	transition: 300ms linear; */
+}
+#toggleLable::before {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: white;
+	border-radius: 50%;
+	transition: left 300ms linear;
+}
+
+#toggle:checked + #toggleLable:before {
+	left: 55px;
 }
